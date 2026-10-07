@@ -36,7 +36,7 @@ a.map{display:inline-block;margin-top:6px;font-size:13px;color:var(--acc);text-d
 <body>
 <main>
 <h1>花蓮遊食物</h1>
-<p class="sub">10/9（五）– 10/11（日）｜住 宿里旅行舍 Sōlis Inn</p>
+<p class="sub">10/9（五）– 10/11（日）｜住 <a href="https://maps.app.goo.gl/JKssooY3tMu1sjbF8" target="_blank" rel="noopener" style="color:var(--acc)">宿里旅行舍 Sōlis Inn ↗</a></p>
 <nav id="nav"></nav>
 <div id="view"></div>
 </main>
@@ -45,30 +45,30 @@ const S='https://www.google.com/maps/search/?api=1&query=';
 const L=id=>'https://maps.app.goo.gl/'+id;
 const days=[
 {k:'Day 1',d:'10/9 五',sub:'市區探索日',items:[
-{t:'11:48',n:'抵達花蓮車站・取車',m:'板橋 09:14／台北 09:25 發車',p:1},
-{t:'12:30',n:'小小兔子廚房［香榭總店］',book:1,h:'11:00–15:30、17:30–21:30',m:'特休請看 IG。部分資料標示 10:00 開，以店家當日公告為準',a:'',map:L('7Gh2DjG7fevKRHZt9')},
-{t:'13:30',n:'花蓮將軍府 1936',p:1},
-{t:'15:00',n:'佐倉步道',p:1},
-{t:'17:30',n:'七星潭',p:1},
-{t:'18:30',n:'東大門夜市',h:'18:00–00:00',m:'晚餐／宵夜自由選，也可看「自由選項」',map:L('P928dxUy8ecud8M68')},
-{t:'晚間',n:'民宿活動',p:1}]},
+{t:'11:48',n:'抵達花蓮車站・取車',m:'板橋 09:14／台北 09:25 發車',map:S+encodeURIComponent('花蓮火車站'),p:1},
+{t:'12:30',n:'小小兔子廚房［香榭總店］',book:'12:30 訂位完成',h:'11:00–15:30、17:30–21:30',m:'特休請看 IG。部分資料標示 10:00 開，以店家當日公告為準',a:'',map:L('7Gh2DjG7fevKRHZt9')},
+{t:'13:30',n:'花蓮將軍府 1936',map:S+encodeURIComponent('花蓮將軍府1936'),p:1},
+{t:'15:00',n:'佐倉步道',map:S+encodeURIComponent('佐倉步道 花蓮'),p:1},
+{t:'17:30',n:'七星潭',map:S+encodeURIComponent('七星潭 花蓮'),p:1},
+{t:'18:30',n:'東大門夜市',h:'18:00–00:00',m:'晚餐／宵夜自由選，也可看「市區餐點選項」',map:L('P928dxUy8ecud8M68')},
+{t:'晚間',n:'民宿活動',map:L('JKssooY3tMu1sjbF8'),p:1}]},
 {k:'Day 2',d:'10/10 六',sub:'山林溪水日（壽豐鄉為主）',items:[
-{t:'早上',n:'早餐自選',m:'見「自由選項」',p:1},
-{t:'10:00',n:'芩溪橋',m:'玩水穿止滑鞋，多帶一套衣服',p:1},
-{t:'12:30',n:'豐坪紅瓦屋釣魚池',book:1,h:'06:00–20:00',m:'野菜拼盤、烤魚；烤魚需預訂',map:L('ZarnTTE2cmfck4qq8')},
+{t:'早上',n:'早餐自選',m:'見「市區餐點選項」',p:1},
+{t:'10:00',n:'芩溪橋',m:'玩水穿止滑鞋，多帶一套衣服',map:S+encodeURIComponent('芩溪橋 花蓮'),p:1},
+{t:'12:30',n:'豐坪紅瓦屋釣魚池',book:'12:30 訂位完成',h:'06:00–20:00',m:'野菜拼盤、烤魚；烤魚需預訂',map:L('ZarnTTE2cmfck4qq8')},
 {t:'採買',n:'豐春冰菓店',h:'⚠️ 目前顯示暫停營業',w:1,m:'冰店，出發前務必確認，別當成一定買得到',map:L('Mfcm7tmjScrZ8tt77')},
 {t:'採買',n:'小和好點 dot.dot. Bakery & Cafe',h:'13:00–17:00',m:'肉桂捲；營業日請看店家內文，午餐後再去',map:L('EhPww7PHNzrvAEUv8')},
 {t:'14:00',n:'池南國家森林遊樂區',h:'08:00–17:00',m:'門票 40 元，可在大地野餐',map:S+encodeURIComponent('池南國家森林遊樂區')},
-{t:'16:00',n:'鹽寮海岸・北濱公園',m:'16:00–18:00 彈性活動',p:1},
-{t:'18:30',n:'藍月。海 Blue Moon（義式餐酒館）',book:1,h:'12:00–21:00',m:'19:00 民宿活動；20:36 苡瑄回程車',map:L('GunuNasruBiB7qrZ7')}]},
+{t:'16:00',n:'鹽寮海岸・北濱公園',m:'16:00–18:00 彈性活動',map:L('TrwdRnRoRdPnq6AR9'),p:1},
+{t:'18:30',n:'藍月。海 Blue Moon（義式餐酒館）',book:'18:30 訂位完成',h:'12:00–20:00',m:'19:00 民宿活動；20:36 苡瑄回程車',map:L('GunuNasruBiB7qrZ7')}]},
 {k:'Day 3',d:'10/11 日',sub:'海岸告別日',items:[
-{t:'早上',n:'早餐自選',m:'見「自由選項」',p:1},
-{t:'13:30',n:'午餐：定置漁場三代目 花蓮總店',book:1,h:'午餐場 11:45–14:00',m:'已訂 5 位。13:30 接近午餐場尾聲，建議再確認',map:L('uQG77V1Y4Cq4ChCt8')},
+{t:'早上',n:'早餐自選',m:'見「市區餐點選項」',p:1},
+{t:'13:30',n:'午餐：定置漁場三代目 花蓮將軍府店',book:'午餐批 13:30 訂位完成',h:'午餐 11:45–14:30',m:'分兩批訂位；不屬於這批的人請至「市區餐點選項」自行選擇，或上網查。營業時間請再向店家確認',map:L('uQG77V1Y4Cq4ChCt8')},
 {t:'14:00',n:'找到了可頌小売所',h:'14:00–18:00',m:'可頌專賣，剛好 14:00 開',map:S+encodeURIComponent('找到了可頌小売所 花蓮')},
 {t:'17:30',n:'市區採買',p:1},
-{t:'晚餐',n:'晚餐：定置漁場三代目 花蓮總店',book:1,h:'晚餐場 17:45–20:00',w:1,m:'已訂 5 位。⚠️ 20:00 還車、20:36 火車，晚餐時間很緊',map:L('uQG77V1Y4Cq4ChCt8')},
+{t:'17:30',n:'晚餐：定置漁場三代目 花蓮將軍府店',book:'晚餐批 17:30 訂位完成',h:'晚餐 17:45–20:00（營業時間請再確認）',w:1,m:'分兩批訂位；不屬於這批的人請至「市區餐點選項」自行選擇，或上網查。注意：20:00 還車、20:36 火車，晚餐時間很緊',map:L('uQG77V1Y4Cq4ChCt8')},
 {t:'20:00',n:'還車',p:1},
-{t:'20:36',n:'回程火車',p:1}]}
+{t:'20:36',n:'回程火車',map:S+encodeURIComponent('花蓮火車站'),p:1}]}
 ];
 const free=[
 {g:'點心／飲料',i:[
@@ -88,9 +88,9 @@ const free=[
 ];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 function shop(x){return (x.h?`<div class="h${x.w?' w':''}">營業 ${esc(x.h)}</div>`:'')+(x.a?`<div class="m">${esc(x.a)}</div>`:'')+(x.map?`<a class="map" href="${x.map}" target="_blank" rel="noopener">在地圖開啟 ↗</a>`:'')}
-function day(i){const d=days[i];return `<h2>${esc(d.d)}｜${esc(d.sub)}</h2>`+d.items.map(x=>`<div class="row${x.p?' plain':''}"><div class="t">${esc(x.t)}</div><div class="b"><div class="n">${esc(x.n)}${x.book?'<span class="tag">已訂位</span>':''}</div>${x.m?`<div class="m">${esc(x.m)}</div>`:''}${shop(x)}</div></div>`).join('')}
-function freeV(){return '<div class="free">'+free.map(g=>`<h2>${esc(g.g)}</h2>`+g.i.map(x=>`<div class="row"><div class="b"><div class="n">${esc(x.n)}</div>${shop(x)}</div></div>`).join('')).join('')+'</div>'}
-const tabs=days.map(d=>d.k).concat('自由選項');
+function day(i){const d=days[i];return `<h2>${esc(d.d)}｜${esc(d.sub)}</h2>`+d.items.map(x=>`<div class="row${x.p?' plain':''}"><div class="t">${esc(x.t)}</div><div class="b"><div class="n">${esc(x.n)}${x.book?`<span class="tag">${esc(x.book===1?'已訂位':x.book)}</span>`:''}</div>${x.m?`<div class="m">${esc(x.m)}</div>`:''}${shop(x)}</div></div>`).join('')}
+function freeV(){return '<div class="free"><p class="m" style="margin:14px 0 0">定置漁場為分批訂位，不屬於該場次的人，可以在這裡選擇，或自行上網查。</p>'+free.map(g=>`<h2>${esc(g.g)}</h2>`+g.i.map(x=>`<div class="row"><div class="b"><div class="n">${esc(x.n)}</div>${shop(x)}</div></div>`).join('')).join('')+'</div>'}
+const tabs=days.map(d=>d.k).concat('市區餐點選項');
 let cur=0;
 function render(){document.getElementById('nav').innerHTML=tabs.map((t,i)=>`<button class="${i===cur?'on':''}" data-i="${i}">${t}</button>`).join('');document.getElementById('view').innerHTML=cur<3?day(cur):freeV();window.scrollTo(0,0)}
 document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b){cur=+b.dataset.i;render()}});
